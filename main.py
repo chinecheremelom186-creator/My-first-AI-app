@@ -1,7 +1,7 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
-from kivy.uix.label import QLabel
+from kivy.uix.label import Label
 
 
 class StudentApp(App):
@@ -9,7 +9,7 @@ class StudentApp(App):
   def build(self):
     layout = BoxLayout(orientation='vertical', padding=40, spacing=20)
 
-    self.label = QLabel(
+    self.label = Label(
         text='[b]My Study AI[/b]\nReady for your notes',
         markup=True,
         font_size='24sp',
@@ -33,3 +33,4 @@ class StudentApp(App):
 
 if __name__ == '__main__':
   StudentApp().run()
+
