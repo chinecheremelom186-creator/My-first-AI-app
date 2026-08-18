@@ -19,4 +19,27 @@ subject = st.selectbox(
 
 if subject != "Select topic...":
     st.info(f"Great choice! Preparing quick study notes for **{subject}**.")
-    st.button("Generate Practice Questions")
+    
+    # Add logic inside the button block
+    if st.button("Generate Practice Questions"):
+        st.subheader(f"📝 Practice Questions: {subject}")
+        
+        if subject == "Python Development":
+            st.write("1. What is the difference between a list and a tuple?")
+            st.write("2. How does a `for` loop differ from a `while` loop?")
+            st.write("3. What is a Streamlit session state?")
+            
+        elif subject == "Organic Chemistry":
+            st.write("1. Explain the difference between SN1 and SN2 reactions.")
+            st.write("2. What functional group is identified by the 2,4-DNP test?")
+            st.write("3. Define structural isomerism with an example.")
+            
+        elif subject == "Mathematics":
+            st.write("1. What is the derivative of $f(x) = x^3 + 2x$?")
+            st.write("2. Solve for $x$: $2x + 5 = 15$.")
+            st.write("3. Define the Pythagorean theorem.")
+            
+        else:
+            st.write("1. What is Newton's second law of motion?")
+            st.write("2. Explain the process of photosynthesis.")
+            st.write("3. What is the pH scale used for?")
