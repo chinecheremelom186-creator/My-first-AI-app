@@ -12,6 +12,7 @@ osx.python_version = 3
 osx.kivy_version = 1.9.1
 android.permissions = READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE
 android.api = 33
+android.build_tools_version = 33.0.2
 android.minapi = 21
 android.sdk = 30
 android.ndk = 25b
