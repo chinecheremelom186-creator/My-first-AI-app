@@ -1,6 +1,7 @@
 [app]
 title = StudyAI
 package.name = studyai
+source.dir = .
 package.domain = org.student
 source.include_exts = py,png,jpg,kv,atlas
 source.include_dir = .
