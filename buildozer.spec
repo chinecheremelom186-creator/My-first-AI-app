@@ -1,19 +1,15 @@
 [app]
+
 title = StudyAI
 package.name = studyai
-source.dir = .
 package.domain = org.student
+source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
-source.include_dir = .
 version = 0.1
 requirements = python3,kivy
 orientation = portrait
-osx.python_version = 3
-osx.kivy_version = 1.9.1
-android.permissions = READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE
+android.permissions = READ_EXTERNAL_STORAGE
 android.api = 31
-android.build_tools_version = 33.0.2
 android.minapi = 21
-android.sdk = 31
-android.ndk = 23b
-android.archs = armeabi-v7a, arm64-v8a
+android.archs = arm64-v8a
+android.accept_sdk_license = True
