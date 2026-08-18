@@ -1,36 +1,22 @@
-from kivy.app import App
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.button import Button
-from kivy.uix.label import Label
+import streamlit as st
 
+st.set_page_config(page_title="Quick AI Assistant", page_icon="⚡")
 
-class StudentApp(App):
+st.title("⚡ Study Assistant")
+st.write("Welcome! This lightweight app runs directly in your browser.")
 
-  def build(self):
-    layout = BoxLayout(orientation='vertical', padding=40, spacing=20)
+# User Input
+user_name = st.text_input("What is your name?", "")
 
-    self.label = Label(
-        text='[b]My Study AI[/b]\nReady for your notes',
-        markup=True,
-        font_size='24sp',
-        halign='center',
-    )
-    layout.add_widget(self.label)
+if user_name:
+    st.success(f"Hello, {user_name}! Ready to get to work?")
 
-    self.btn = Button(
-        text='Tap to Process PDF',
-        size_hint=(1, 0.3),
-        background_color=(0.1, 0.5, 0.8, 1),
-    )
-    self.btn.bind(on_press=self.on_button_click)
-    layout.add_widget(self.btn)
+# Interactive feature
+subject = st.selectbox(
+    "Choose a topic to review today:",
+    ["Select topic...", "Python Development", "Organic Chemistry", "Mathematics", "General Science"]
+)
 
-    return layout
-
-  def on_button_click(self, instance):
-    self.label.text = 'Scanning local storage for PDFs...'
-
-
-if __name__ == '__main__':
-  StudentApp().run()
-
+if subject != "Select topic...":
+    st.info(f"Great choice! Preparing quick study notes for **{subject}**.")
+    st.button("Generate Practice Questions")
